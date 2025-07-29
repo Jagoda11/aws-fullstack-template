@@ -16,7 +16,6 @@ This project includes pre-configured setups for:
 - ESLint 🛠️
 - Prettier 🖋️
 - Jest 🃏
-- Husky 🐶
 
 ## 🚀 Initial Setup
 
@@ -61,12 +60,11 @@ To run these scripts, use `npm run <script-name>`:
 - `lint:frontend`: 🧹 Lints JavaScript and TypeScript files in the `frontend` directory.
 - `lint:backend`: 🧹 Lints JavaScript and TypeScript files in the `backend` directory.
 - `setup-eslint`: 🔧 Runs the setup script to choose the frontend and backend frameworks, install the necessary dependencies, and configure the project.
-- `precommit`: 🔒 Runs the `lint` and `test` scripts before each commit to ensure code quality. This is managed by Husky 🐶.
+- `precommit`: 🔒 Runs the `lint` and `test` scripts before each commit to ensure code quality.
 - `pretest`: 🔍 Lints the code before running tests.
 - `watch`: 👀 Runs tests in watch mode using Jest.
 - `debug`: 🐞 Starts the application in debug mode using `nodemon`.
 - `clean`: 🧽 Removes the `node_modules` directory and `package-lock.json` file.
-- `prepare`: 🐾 Sets up Husky for managing git hooks.
 
 ## 🤖 GitHub Actions Workflows
 

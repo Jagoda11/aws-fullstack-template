@@ -17,8 +17,7 @@
     "pretest": "echo '🔎 Pretest: Linting code...' && npm run lint",
     "watch": "echo '👀 Watching files...' && jest --watch",
     "debug": "echo '🐞 Starting the app in debug mode...' && NODE_ENV=development nodemon --inspect src/index.js",
-    "clean": "echo '🧽 Cleaning up...' && rm -rf ./node_modules ./dist && rm package-lock.json",
-    "prepare": "husky install # 🐶 Setting up Husky"
+    "clean": "echo '🧽 Cleaning up...' && rm -rf ./node_modules ./dist && rm package-lock.json"
   },
   "repository": {
     "type": "git",
@@ -51,7 +50,6 @@
     "eslint-plugin-prettier": "^5.5.3",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^5.2.0",
-    "husky": "^9.1.7",
     "jest": "^30.0.5",
     "nodemon": "^3.1.10",
     "prettier": "^3.6.2",
