@@ -77,8 +77,6 @@ See `package.json` for the full list.
 
 This repo includes CI workflows for build, test, and dependency updates. See `.github/workflows/` for details.
 
-## 🤖 GitHub Actions Workflows
-
 This template includes several GitHub Actions workflows that automate various tasks:
 
 🚀ci.yml: Runs your project's continuous integration (CI) tasks.
