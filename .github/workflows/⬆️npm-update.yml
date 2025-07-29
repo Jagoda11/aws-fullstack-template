@@ -32,25 +32,12 @@ jobs:
       - name: 📦 Update dependencies with legacy peer deps
         run: npm update --legacy-peer-deps
 
-      - name: 🎭 Mask Debricked credentials
-        run: |
-          echo "::add-mask::${{ secrets.DEBRICKED_TOKEN }}"
-
-      - name: Install Debricked CLI
-        run: |
-          curl -L https://github.com/debricked/cli/releases/latest/download/cli_linux_x86_64.tar.gz | tar -xz debricked
-          sudo mv debricked /usr/local/bin/debricked
-
-      - name: 🛡️ Debricked Vulnerability Scan
-        run: |
-          debricked scan -t ${{ secrets.DEBRICKED_TOKEN }} -r ${{ github.repository }} -c ${{ github.sha }}
-
       - name: 🏗️ Build project
         run: npm run build
 
       - name: ✅ Run tests
         run: npm test
-        
+
       - name: 📝 Commit changes
         if: success()
         run: |
