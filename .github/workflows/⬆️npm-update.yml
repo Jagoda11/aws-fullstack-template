@@ -27,10 +27,7 @@ jobs:
       - name: ⬆️ Update all npm packages
         run: |
           ncu -u
-          npm install
-
-      - name: 📦 Update dependencies with legacy peer deps
-        run: npm update --legacy-peer-deps
+          npm install --legacy-peer-deps
 
       - name: 🏗️ Build project
         run: npm run build
@@ -39,7 +36,7 @@ jobs:
         run: npm test
 
       - name: 📝 Commit changes
-        if: success()
+        if: ${{ success() }}
         run: |
           git config --local user.name "Debugging Duck 🦆"
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
@@ -47,5 +44,5 @@ jobs:
           git diff-index --quiet HEAD || git commit -m "⬆️ update all npm dependencies ⬆️"
 
       - name: 🚀 Push changes
-        if: success()
+        if: ${{ success() }}
         run: git push
