@@ -1,4 +1,4 @@
-## 🤝 Contributing
+# 🤝 Contributing
 
 [fork]: https://github.com/Jagoda11/my-project-template/fork
 [pr]: https://github.com/Jagoda11/my-project-template/compare
