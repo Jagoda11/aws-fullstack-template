@@ -35,9 +35,9 @@ export default [
     },
     plugins: {
       '@typescript-eslint': typescript,
-      'jest': jest,
-      'prettier': prettier,
-      'react': reactPlugin,
+      jest: jest,
+      prettier: prettier,
+      react: reactPlugin,
       'react-hooks': reactHooks,
     },
     settings: {
@@ -47,7 +47,7 @@ export default [
     },
     rules: {
       'prettier/prettier': 'error',
-      'react/jsx-filename-extension': [1, { 'extensions': ['.tsx'] }],
+      'react/jsx-filename-extension': [1, { extensions: ['.tsx'] }],
       'react/react-in-jsx-scope': 'off',
       '@typescript-eslint/explicit-module-boundary-types': 'warn',
       '@typescript-eslint/no-unused-vars': 'warn',
@@ -57,7 +57,7 @@ export default [
       'jest/no-focused-tests': 'error',
       'jest/no-identical-title': 'error',
       'react-hooks/rules-of-hooks': 'error',
-      'react-hooks/exhaustive-deps': 'warn'
-    }
-  }
-];
+      'react-hooks/exhaustive-deps': 'warn',
+    },
+  },
+]

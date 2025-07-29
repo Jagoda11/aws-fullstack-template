@@ -58,16 +58,16 @@ aws-fullstack-template/
 
 Run these from the root unless otherwise noted:
 
-- `start`         – Build and start the backend server
-- `build`         – Build both backend and frontend
+- `start` – Build and start the backend server
+- `build` – Build both backend and frontend
 - `build:backend` – Build backend only
 - `build:frontend`– Build frontend only
-- `test`          – Run Jest tests with coverage
-- `format`        – Format code with Prettier
-- `lint`          – Lint all code with ESLint
+- `test` – Run Jest tests with coverage
+- `format` – Format code with Prettier
+- `lint` – Lint all code with ESLint
 - `lint:frontend` – Lint frontend code
-- `lint:backend`  – Lint backend code
-- `clean`         – Remove build artifacts and dependencies
+- `lint:backend` – Lint backend code
+- `clean` – Remove build artifacts and dependencies
 
 See `package.json` for the full list.
 

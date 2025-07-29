@@ -31,15 +31,15 @@ export default [
     },
     plugins: {
       '@typescript-eslint': typescript,
-      'jest': jest,
-      'import': importPlugin,
-      'prettier': prettier,
+      jest: jest,
+      import: importPlugin,
+      prettier: prettier,
     },
     rules: {
       'no-shadow': 'error',
       'prettier/prettier': 'error',
-      'eqeqeq': ['error', 'always'],
-      'curly': ['error', 'all'],
+      eqeqeq: ['error', 'always'],
+      curly: ['error', 'all'],
       'no-unused-vars': 'off',
       '@typescript-eslint/no-unused-vars': 'warn',
       'no-redeclare': 'error',
@@ -54,17 +54,24 @@ export default [
       'import/order': [
         'error',
         {
-          'groups': ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
+          groups: [
+            'builtin',
+            'external',
+            'internal',
+            'parent',
+            'sibling',
+            'index',
+          ],
           'newlines-between': 'always',
-          'alphabetize': {
-            'order': 'asc',
-            'caseInsensitive': true
-          }
-        }
+          alphabetize: {
+            order: 'asc',
+            caseInsensitive: true,
+          },
+        },
       ],
       'consistent-return': 'error',
       'no-unused-expressions': 'warn',
-      'no-useless-constructor': 'warn'
-    }
-  }
-];
+      'no-useless-constructor': 'warn',
+    },
+  },
+]
