@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "vite",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc --project tsconfig.react.json"
+    "build": "vite build",
+    "build:ts": "tsc --project tsconfig.react.json",
+    "preview": "vite preview"
   },
   "keywords": [],
   "author": "",
@@ -22,7 +24,9 @@
     "undefined": "^0.1.0"
   },
   "devDependencies": {
+    "@tailwindcss/forms": "^0.5.10",
     "@tailwindcss/postcss": "^4.1.12",
+    "@tailwindcss/typography": "^0.5.16",
     "@types/react": "^19.1.12",
     "@types/react-dom": "^19.1.9",
     "@types/react-redux": "^7.1.34",
