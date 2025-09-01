@@ -1,19 +1,19 @@
 import path from 'path'
 
-import express from 'express'
+import express, { Request, Response, NextFunction } from 'express'
 
 const app = express()
 const PORT = Number(process.env.PORT || 3000)
 
 // Simple request logger
-app.use((req, _res, next) => {
+app.use((req: Request, _res: Response, next: NextFunction) => {
   const now = new Date().toISOString()
   console.log(`[${now}] ${req.method} ${req.url}`)
   next()
 })
 
 // Example API route
-app.get('/api/hello', (_req, res) => {
+app.get('/api/hello', (_req: Request, res: Response) => {
   res.json({ message: 'Hello from the Backend!' })
 })
 
@@ -22,7 +22,7 @@ const frontendDist = path.join(__dirname, '..', '..', 'frontend', 'dist')
 app.use(express.static(frontendDist))
 
 // SPA fallback (use app.use to avoid path-to-regexp parsing of string patterns)
-app.use((_req, res) => {
+app.use((_req: Request, res: Response) => {
   res.sendFile(path.join(frontendDist, 'index.html'))
 })
 
