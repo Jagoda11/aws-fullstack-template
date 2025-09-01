@@ -11,7 +11,7 @@ const App = () => {
         marginTop: '2rem',
       }}
     >
-  <h1 className="text-3xl font-bold">🚀 Hello from the Frontend!</h1>
+      <h1 className="text-3xl font-bold">🚀 Hello from the Frontend!</h1>
       <p>If you see this, your React + Vite setup works!</p>
       <div className="max-w-md mx-auto mt-6 text-left">
         <form className="space-y-4">
@@ -39,7 +39,9 @@ const App = () => {
           </label>
 
           <div>
-            <button className="inline-block bg-blue-600 text-white px-4 py-2 rounded-md">Submit</button>
+            <button className="inline-block bg-blue-600 text-white px-4 py-2 rounded-md">
+              Submit
+            </button>
           </div>
         </form>
       </div>
