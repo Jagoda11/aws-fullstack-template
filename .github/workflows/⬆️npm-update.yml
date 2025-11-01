@@ -29,8 +29,20 @@ jobs:
           ncu -u
           npm install --legacy-peer-deps
 
-      - name: 🏗️ Build project
-        run: npm run build
+      - name: 🧰 Install backend dependencies
+        run: |
+          npm ci --prefix ./backend
+          # install typescript locally for the build without modifying package.json
+          npm install --prefix ./backend --no-save typescript
+
+      - name: 🏗️ Build backend
+        run: npm run build --prefix ./backend
+
+      - name: 🧰 Install frontend dependencies
+        run: npm ci --legacy-peer-deps --prefix ./frontend
+
+      - name: 🏗️ Build frontend
+        run: npm run build --prefix ./frontend
 
       - name: ✅ Run tests
         run: npm test
